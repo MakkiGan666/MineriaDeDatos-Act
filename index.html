@@ -171,5 +171,85 @@
             </tbody>
         </table>
 
+         <!-- Sección del gráfico comparativo -->
+        <h2 class="chart-title">Estadísticas Comparativas (Gráfico Radar)</h2>
+        <div class="chart-container">
+            <canvas id="statsChart"></canvas>
+        </div>
+
+        <!-- Incluye Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const ctx = document.getElementById('statsChart').getContext('2d');
+                const statsChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Fuerza', 'Velocidad', 'Magia', 'Resistencia', 'Habilidad', 'Inteligencia', 'Experiencia'],
+                        datasets: [
+                            {
+                                label: 'Liu Kang',
+                                data: [8, 9, 8, 7, 10, 7, 9],
+                                backgroundColor: 'rgba(230, 57, 0, 0.2)',
+                                borderColor: 'rgba(230, 57, 0, 1)',
+                                borderWidth: 2,
+                                pointBackgroundColor: '#e63900'
+                            },
+                            {
+                                label: 'Goro',
+                                data: [9, 5, 3, 8, 7, 6, 8],
+                                backgroundColor: 'rgba(106, 13, 173, 0.2)',
+                                borderColor: 'rgba(106, 13, 173, 1)',
+                                borderWidth: 2,
+                                pointBackgroundColor: '#6a0dad'
+                            },
+                            {
+                                label: 'Raiden',
+                                data: [7, 8, 10, 8, 9, 9, 10],
+                                backgroundColor: 'rgba(0, 168, 232, 0.2)',
+                                borderColor: 'rgba(0, 168, 232, 1)',
+                                borderWidth: 2,
+                                pointBackgroundColor: '#00a8e8'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    color: '#444'
+                                },
+                                grid: {
+                                    color: '#444'
+                                },
+                                pointLabels: {
+                                    color: '#ff914d',
+                                    font: {
+                                        size: 12
+                                    }
+                                },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    color: '#fff',
+                                    stepSize: 2
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#fff',
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+
 </body>
 </html>
