@@ -1,0 +1,181 @@
+/* style.css */
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Encabezados */
+h1 {
+    color: #e63900;
+    text-align: center;
+    text-shadow: 0 0 10px #ff6b00;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #ff6b00;
+    border-bottom: 2px solid #e63900;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #ff914d;
+    margin-top: 25px;
+    font-size: 1.4rem;
+}
+
+/* Párrafos y listas */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* Imagen */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 3px solid #e63900;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #e63900;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: #333;
+}
+
+/* Barras de progreso */
+.level-bar {
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+    width: 100px;
+}
+
+.level-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e63900, #ff6b00);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255, 107, 0, 0.7);
+}
+
+/* Tabla comparativa */
+.comparison-table {
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+}
+
+/* Efectos especiales */
+@keyframes fire-glow {
+    0% { text-shadow: 0 0 5px #ff6b00; }
+    50% { text-shadow: 0 0 15px #ff914d; }
+    100% { text-shadow: 0 0 5px #ff6b00; }
+}
+
+h1:hover {
+    animation: fire-glow 1.5s infinite;
+}
+
+/* Estilos para la sección del gráfico */
+.chart-title {
+    color: #ff6b00;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 0 0 5px rgba(255, 107, 0, 0.5);
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+    border: 1px solid #e63900;
+}
+
+/* Efecto hover para el contenedor del gráfico */
+.chart-container:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ajustes responsivos para el gráfico */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+    
+    .chart-title {
+        font-size: 1.5rem;
+    }
+}
